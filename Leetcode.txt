@@ -1,0 +1,143 @@
+1. LC_2481(Minimum Cuts to Divide a Circle)LC_2235( Add Two Integers)
+class Solution {
+    public int sum(int num1, int num2) {
+        return num1 + num2;
+    }
+}
+
+2. LC_2119( A Number After a Double Reversal)
+class Solution {
+    public boolean isSameAfterReversals(int num) {
+        if(num == 0){
+            return true;
+        }
+        if(num % 10 == 0){
+            return false;
+        }
+        return true;
+    }
+}
+
+3. LC_2481(Minimum Cuts to Divide a Circle)
+class Solution {
+    public int numberOfCuts(int n) {
+        if(n == 1){
+            return 0;
+        }
+        if(n % 2 == 0){
+            return n/2;
+        }
+		
+4. LC_1025(Divisor Game)
+class Solution {
+    public boolean divisorGame(int n) {
+        if(n % 2 == 0){
+            return true;
+        }
+        if(n % 2 != 0){
+            return false;
+        }
+        return true;
+    }
+}
+
+5.  LC_292(Nim Game)
+class Solution {
+    public boolean canWinNim(int n) {
+        if(n % 4 == 0){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+}
+
+6. LC_258(Add Digits)
+class Solution {
+    public int addDigits(int num) {
+       return num == 0 ? 0 : 1+(num-1)%9;
+    }
+}
+
+7. LC_1688(Count of Matches in Tournament)
+class Solution {
+    public int numberOfMatches(int n) {
+        return n-1;
+    }
+}
+
+8. LC_2413( Smallest Even Multiple)
+class Solution {
+    public int smallestEvenMultiple(int n) {
+        if(n % 2 == 0){
+            return n;
+        }
+        if(n % 2 != 0){
+            return n*2;
+        }
+        return n;
+    }
+}
+
+9.  LC_2651(Calculate Delayed Arrival Time)
+class Solution {
+public:
+    int findDelayedArrivalTime(int arrivalTime, int delayedTime) {
+        int sum = arrivalTime + delayedTime;
+        return (sum>=24) ? sum-24: sum;
+    }
+};
+
+10.  LC_2485(Find the Pivot Integer)
+class Solution {
+    public int pivotInteger(int n) {
+        int sum = (n+1)*n/2;
+        int pivot = (int)Math.sqrt(sum);
+        return pivot * pivot == sum ? pivot : -1;
+    }
+}
+
+11.  LC_2600(K Items With the Maximum Sum)
+class Solution {
+    public int kItemsWithMaximumSum(int numOnes, int numZeros, int numNegOnes, int k) {
+        return(numOnes>=k)?k : (k>numOnes&&k<=numOnes+numZeros)? numOnes : numOnes-(k-(numOnes+numZeros));
+    }
+}
+
+12.  LC_2549(Count Distinct Numbers on Board)
+class Solution {
+    public int distinctIntegers(int n) {
+        if(n == 1){
+            return 1;
+        }
+        else{
+            return n-1;
+        }
+    }
+}
+
+13.  LC_2769(Find the Maximum Achievable Number)
+class Solution {
+    public int theMaximumAchievableX(int num, int t) {
+        return num+2*t;
+    }
+}
+
+14. LC_2806(Account Balance After Rounded Purchase)
+class Solution {
+    public int accountBalanceAfterPurchase(int pa) {
+        int f = (100-pa)/10;
+        int s = (100-pa)%10;
+        if(s >=6)f++;
+        return f*10;
+    }
+}
+
+15. LC_2582(Pass the Pillow)
+class Solution {
+    public int passThePillow(int n, int time) {
+        time %= 2 * (n-1);
+        return time < n ? time + 1 : 2 * n - time - 1;
+    }
+}
